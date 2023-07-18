@@ -5,4 +5,8 @@ let obj={
 }
 
 
-console.log(Object.values(obj).length)
+// console.log(Object.values(obj).length)
+
+let arr=[1,2,3,4,5];
+
+console.log(typeof(arr),Array.isArray(arr))

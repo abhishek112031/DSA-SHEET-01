@@ -1,4 +1,3 @@
-
 let n=5;
 let s="";
 for(let i=n;i>0;i--){
