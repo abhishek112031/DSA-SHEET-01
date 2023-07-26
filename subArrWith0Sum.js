@@ -13,5 +13,5 @@ function subArrWith0sum(arr){
     }
     return resSubArrSet;
 }
-let arr = [6, 3, -1, -3, 4, -2, 2, 4, 6, -12, -7];
+let arr = [0,6, 3, -1, -3, 4, -2, 2, 4, 6, -12, -7];
 console.log(subArrWith0sum(arr))

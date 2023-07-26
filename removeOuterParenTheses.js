@@ -1,7 +1,7 @@
 
 
 // let  S = "(()())(())(()(()))";
-let S='(())'
+let S='(())';
 
 function removeOuterParenthesis(s){
     let count=0;

@@ -30,5 +30,5 @@ function sieveAlgo(n){
     }
 }
 
-sieveAlgo(102);
+sieveAlgo(8);
 

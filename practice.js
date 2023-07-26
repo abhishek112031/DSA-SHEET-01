@@ -1099,7 +1099,7 @@
 //         console.log(arr[0].substring(0,i));
 //         break;
 //     }
-    
+
 // }
 
 
@@ -1122,3 +1122,339 @@
 //     }
 // }
 // console.log(subArr);
+
+//array or not:
+// const arr=[1,2,3,4];
+// console.log(Array.isArray(arr))
+// delete arr[0];
+// console.log(arr.length,arr)//4, [ <1 empty item>, 2, 3, 4 ];
+
+
+//prime numbers:
+// function isPrime(n){
+//     if(n==0||n==1){
+//         return false;
+//     }
+//     for(let i=2;i<=Math.sqrt(n);i++){
+//         if(n%i===0){
+//             return false;
+//         }
+//     };
+//     return true;
+// }
+// // console.log(isPrime(11))
+// const arr=[];
+// for(let i=0;i<100;i++){
+//     if(isPrime(i)){
+//         arr.push(i)
+//     }
+
+// }
+// console.log(arr);
+
+//sieve algorithm:
+
+
+//row with max 1s:
+// let arr=[[0, 0, 0, 0],
+// [0, 0, 0, 0],
+// [0, 1, 1, 1],
+// [0, 0, 1, 1]];
+
+
+// function rowWithMax1s(arr){
+//     let row=-1;
+//     let maxCountOf1s=0;
+
+//     for(let i=0;i<arr.length;i++){
+//         let coir=binSearch(arr,i);//count of 1s in ith row
+
+//         if(coir>maxCountOf1s){
+//             maxCountOf1s=coir;
+//             row=i;
+//         }
+//     }
+//     return row;
+
+//     function binSearch(arr,row){
+//         let l=0,r=arr[row].length-1;
+//         let firstindex=arr[row].length;
+
+//         while(l<=r){
+//             let mid=Math.floor((l+r)/2);
+
+
+//             if(arr[row][mid]===1){
+//                 firstindex=mid;
+//                 r=mid-1;
+//             }
+//             else{
+//                 l=mid+1;
+
+//             }
+//         }
+
+//         let count=arr[row].length-firstindex;
+//         return count;
+//     }
+// }
+// console.log(rowWithMax1s(arr));
+
+
+//some array methods:
+// let  matrix = [[11,5,9],[10,11,13],[12,13,15]];
+// let x=matrix.flat();
+// console.log(x,x==matrix)
+
+// let arr=new Array();
+// arr.push(10)
+// arr.push(10)
+// console.log(arr);
+
+
+// let arr=new Array(5).fill(2);
+// console.log(arr)
+
+//array concat:-->
+// let arr1=[1,2,3,4,5];
+// let arr2=[6,7,8,9,0];
+// let arr3=[8,4,3,1];
+// console.log(arr1.concat(arr2).concat(arr3))
+
+
+//string repeat method:--->
+// let str='abc';
+// let res=str.repeat(2);
+// console.log(res);
+
+
+
+//remove consecutive:'aaabbbc'=>abc
+// function removeConsecutiveChar(s){
+//     let charArr=[];
+//     for(let i of s){
+//         if(!charArr.length || charArr[charArr.length-1]!==i){
+//             charArr.push(i)
+//         }
+//     }
+//     return charArr.join('')
+// }
+// console.log(removeConsecutiveChar('aaabbbcccbccaaa'))
+
+
+
+//even:
+
+// let print_even = (n) => {
+
+//     let p = 2;
+
+//     while (p <= 10) {
+//         // p%2==0
+
+//         console.log(p)
+
+//         p += 2;
+//     }
+
+// }
+
+
+//kadanes algorithm:
+// let arr=[1,2,-3,4,5,-6,10];
+
+// function kadanesAlgo(arr){
+//     let max=arr[0];
+//     let sum=0;
+
+//     for(let i=0;i<arr.length;i++){
+//         sum=sum+arr[0];
+//         max=Math.max(sum,max);
+
+//         if(sum<0){
+//             sum=0;
+//         }
+//     }
+//     return max;
+// }
+
+// console.log(kadanesAlgo(arr))
+
+
+//remove outer parentheses:
+
+// let s='(())(())';
+
+// function removeOuterParenthesis(s){
+//     let count=0;//1
+//     let ans='';//()
+//     for(let i of s){
+//         if(i=='('){
+//             if(count){
+//                 ans+=i;
+
+//             }
+//             count++
+//         }
+//         else{
+//             count--;
+//             if(count){
+//                 ans+=i;
+//             }
+//         }
+//     }
+//     return ans;
+// }
+// console.log(removeOuterParenthesis(s))
+
+
+//remove duplicates:
+//sol-1
+// let arr=[2,2,5,5,1,1,0]
+// function removeDuplicate(arr){
+//     // let res=[];
+//     // for(let i of arr){
+//     //     if(!res.includes(i)){
+//     //         res.push(i);
+//     //     }
+//     // }
+//     // return res;
+
+  
+// }
+// console.log(removeDuplicate(arr))
+
+
+///sol-2:
+// let op=arr.filter((elem,ind)=>{
+//     return arr.indexOf(elem)===ind;
+
+// });
+// console.log(op)
+
+
+//sol3:
+// let map=new Map();
+// for(let i of arr){
+//     map.set(i,map.has(i)?map.get(i)+1:1)
+// }
+
+// for(let i of map.keys()){
+//     console.log(i)
+// }
+
+//decode string:--->
+// let s = "3[a2[c]]";
+
+// function decodeString(s){
+//     let stack=[];
+//     for(let i of s){
+//         if(i!==']'){
+//             stack.push(i);
+//             continue;
+//         }
+
+//        let str='';
+//        let num='';
+
+//        while(stack[stack.length-1]!=='['){
+//         str=stack.pop()+str;
+//        }
+
+//        stack.pop();
+
+//        while(parseInt(stack[stack.length - 1])){
+//         num=stack.pop()+num;
+//        };
+
+//        let segment=str.repeat(Number(num));
+//        stack.push(segment);
+
+
+
+//     }
+//     return stack.join('')
+// }
+
+// console.log(decodeString(s));
+
+
+//reverse a number:
+// function reverseAnum(n){
+//     let num=n;
+   
+//     let rev=0;
+
+//     while(num!=0){
+//         rev=(rev*10)+(num%10);
+//         num=Math.floor(num/10);
+//     }
+//     return rev;
+
+// }
+// console.log(reverseAnum(122))
+//obj key-val manipulation:--->
+// let obj={
+//     first_name:'Abhishek',
+//     last_name:'Adhikary',
+//     user_email_id:'abhishek.112031@gmail.com'
+// }
+// let resObj={};
+// for(let [key,val] of Object.entries(obj)){
+//     let arr=key.split('_');
+//     for(let i=1;i<arr.length;i++){
+//         arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].slice(1);
+//     }
+//     resObj[arr.join('')]=val;
+// }
+// console.log(resObj);
+
+
+//buy-sell stock:
+
+// let arr=[1,5,2,8,10,7,20];
+
+// function buySellStock(arr){
+//     let curPrice=arr[0];
+//     let maxProfit=-Infinity;
+
+//     for(let i=1;i<arr.length;i++){
+//         curProfit=arr[i]-curPrice;
+
+//         if(curPrice>arr[i]){
+//             curPrice=arr[i];
+//         }
+//         if(maxProfit<curProfit){
+//             maxProfit=curProfit;
+//         }
+//     }
+//     return maxProfit;
+
+// }
+
+// console.log(buySellStock(arr))
+
+//generate random number:
+
+// console.log(Math.round(Math.random()*2))
+
+function subArrWith0sum(arr){
+    let res=[];
+
+    for(let i=0;i<arr.length;i++){
+        let prefix=0;
+        for(let j=i;j<arr.length;j++){
+            prefix+=arr[j];
+
+            if(prefix==0){
+
+                res.push(arr.slice(i,j+1));
+                // res.push([i,j])
+            }
+        }
+    }
+    return res;
+   
+}
+let arr = [0,6, 3, -1, -3, 4, -2, 2, 4, 6, -12, -7];
+console.log(subArrWith0sum(arr))
