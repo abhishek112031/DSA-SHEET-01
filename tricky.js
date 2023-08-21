@@ -14,12 +14,12 @@
 
 
 
-// var v=10;
-// (()=>{
-//     console.log(v);
-//     v=20;
-//     x=8;
-//     console.log(v)
-// })()
-// console.log(v);
-// console.log(x)
+var v=10;
+(()=>{
+    console.log(v);
+    var v=20;
+    x=8;
+    console.log(v)
+})()
+console.log(v);
+console.log(x)

@@ -173,15 +173,105 @@
 
 //abstruction:--->
 //Creating a constructor function  
-function Vehicle()  
-{  
-    this.vehicleName= vehicleName;  
-    throw new Error("You cannot create an instance of Abstract class");  
+// function Vehicle()  
+// {  
+//     this.vehicleName= vehicleName;  
+//     throw new Error("You cannot create an instance of Abstract class");  
   
-}  
-Vehicle.prototype.display=function()  
-{  
-    return this.vehicleName;  
-}  
-var vehicle=new Vehicle();  
-// console.log(vehicle.vehicleName)
+// }  
+// Vehicle.prototype.display=function()  
+// {  
+//     return this.vehicleName;  
+// }  
+// var vehicle=new Vehicle();  
+// // console.log(vehicle.vehicleName)
+
+
+//encapsulation:-->
+// class Account{
+//     #accountNo='1233Ac';
+//     #bal=1000;
+
+  
+
+//     getBal(){
+//         console.log(this.#bal,this.#accountNo)
+//     }
+//     withdraw(x){
+//         if(isNaN(x) || x>this.#bal){
+//             console.log('cant be withdrawl')
+
+//         }
+//         else{
+//             this.#bal=this.#bal-x;
+//             console.log(this.#bal)
+//         }
+//     }
+
+// }
+
+// let a=new Account(300,200);
+// a.getBal();
+// a.withdraw(1110);
+
+//polymorphism:--->
+// class Shape{
+//     constructor(){
+//         this.shapeType='anyShape'
+//     }
+//     printShape(){
+//         return this.shapeType;
+//     }
+// }
+
+// class Circle extends Shape{
+//     constructor(rad){
+//         super()
+//         this.shapeType='circle';
+//         this.rad=rad;
+//     }
+//     printShape(){
+//         return `${this.shapeType},${this.rad}`;
+//     }
+
+// }
+
+// class Triangle extends Shape{
+//     constructor(area){
+//         super()
+//         this.shapeType='Triangle';
+//         this.area=area;
+//     }
+//     printShape(){
+//         return `${this.shapeType},${this.area}`;
+//     }
+
+// }
+
+// let c1=new Circle(12);
+// let t1=new Triangle(122);
+
+// function printDetails(f1,f2){
+//     console.log(f1.printShape(),'\n',f2.printShape())
+// }
+// printDetails(c1,t1)
+
+
+
+
+//objectCreation method:---->
+
+// function obj(name,age,sex){
+//     this.name=name;
+//     this.age=age;
+//     this.sex=sex;
+// }
+
+
+// obj.prototype.getDetails=function(){
+//     console.log(this.name,this.age,this.sex)
+// }
+
+// let obj1=new obj('abhi',32,'M');
+// obj1.getDetails();
+

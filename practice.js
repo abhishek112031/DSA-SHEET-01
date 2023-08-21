@@ -1320,7 +1320,7 @@
 //     // }
 //     // return res;
 
-  
+
 // }
 // console.log(removeDuplicate(arr))
 
@@ -1382,7 +1382,7 @@
 //reverse a number:
 // function reverseAnum(n){
 //     let num=n;
-   
+
 //     let rev=0;
 
 //     while(num!=0){
@@ -1438,23 +1438,390 @@
 
 // console.log(Math.round(Math.random()*2))
 
-function subArrWith0sum(arr){
-    let res=[];
+// function subArrWith0sum(arr){
+//     let res=[];
 
-    for(let i=0;i<arr.length;i++){
-        let prefix=0;
-        for(let j=i;j<arr.length;j++){
-            prefix+=arr[j];
+//     for(let i=0;i<arr.length;i++){
+//         let prefix=0;
+//         for(let j=i;j<arr.length;j++){
+//             prefix+=arr[j];
 
-            if(prefix==0){
+//             if(prefix==0){
 
-                res.push(arr.slice(i,j+1));
-                // res.push([i,j])
-            }
-        }
-    }
-    return res;
+//                 res.push(arr.slice(i,j+1));
+//                 // res.push([i,j])
+//             }
+//         }
+//     }
+//     return res;
+
+// }
+// let arr = [0,6, 3, -1, -3, 4, -2, 2, 4, 6, -12, -7];
+// console.log(subArrWith0sum(arr))
+
+
+//join function:
+
+// let arr=['a','b','c'];
+
+// console.log(typeof arr.join());
+
+//string replace:--->
+// let str='hi, my name is abhishek';
+
+// // let op=str.replace(/abhishek/gi,'animesh');
+// let op=str.replace(/[^a-z0-9]/gi,'')
+
+// console.log(op);
+
+
+// `${12} X ${i} = ${12*i}`;
+
+
+//str equality:
+// let arr1=[1,2,3];
+// let arr2=[1,2,3];
+
+// let s1='abhi';
+// let s2='abhi';
+// // console.log(s1===s2)//true;
+// // console.log(arr1===arr2)//false
+
+// function change(s,arr){
+//     s+='s';
+//     arr.push(4)
+//     return [s,arr];
+// }
+// console.log(change(s1,arr1),s1,arr1)
+
+
+
+//stack:
+// class Stack{
+// }
+
+
+//nge:
+
+// let arr=[1,2,1,9,3,6,2,4];
+// let arr2=[...arr,...arr];
+
+// let res=[];
+
+// for(let i=0;i<arr.length;i++){
+//     let nge=-1;
+//     for(let j=i+1;j<arr2.length;j++){
+//         if(arr[i]<arr2[j]){
+//             nge=arr2[j];
+//             break;
+//         }
+
+
+//     }
+//     res.push(nge)
+// }
+// console.log(res);
+
+
+// let obj={
+//     name:'abhishek',
+//     age:32,
+//     friend:{
+//         name:'shuvam',
+//         age:29,
+//         friend:{
+//             name:'shoumik',
+//             age:33,
+//             getDetails:function(){
+//                 console.log(this.name,this.age)//hare also we can not use arraow function
+//             }
+//         }
+//     }
+// }
+// obj.friend.friend.getDetails();
+
+// function sum(n){
+//     if(n==1){
+//         return 1;
+//     }
+//     else{
+//         return sum(n-1)+n;
+//     }
+// }
+// console.log(sum(3))
+
+
+
+// function reverse(n){
+//     var num=n;
+//     var rev=0;
+//     while(num  != 0){
+//         rev=(rev*10)+(num%10);
+//         num=Math.floor(num/10);
+
+//     }
+//     return rev;
+// }
+// console.log(reverse(60))
+
+
+//prime no :
+
+// function isPrime(n){
+//     if(n==0 || n==1){
+//         return false;
+//     }
+//     for(let i=2;i<=Math.sqrt(n);i++){
+//         if(n%i===0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// for(let i=1;i<=100;i++){
+//     if(isPrime(i)){
+//         console.log(i)
+//     }
+// }
+
+
+
+//topic to practice:
+
+//1) node js 
+//2)chat app
+//3)aws s3 cicd
+//4)stack and queue 
+//5)linked list
+
+
+
+// let arr=[1,2,3,4];
+// const res=[];
+// for(let i=0;i<arr.length;i++){
+//     for(let j=i+1;j<=arr.length;j++){
+//        res.push(arr.slice(i,j));
+//     }
+// }
+// console.log(res)
+
+
+//sliding window:
+//max sum of given length sub arr:
+
+// let arr=[1,2,3,-3,7,-1,6];
+// let k=3;
+
+// //sum upto k;
+// let s=0
+// for(let i=0;i<k;i++){
+//     s+=arr[i];
+
+// }
+
+// let maxSum=s;
+
+
+// for(let i=k;i<arr.length;i++){
+//     s+=arr[i]-arr[i-k];
+//     if(s>maxSum){
+//         maxSum=s;
+//     }
+// }
+// console.log(maxSum)
+
+
+//reverse words:
+// let s='i love coding, curreantly learning node js'
+
+// function revWords(s){
+//    let s2=s.split(' ')
+//    let res=[];
+
+//    for(let i=s2.length-1;i>=0;i--){
+//        if(s2[i]!=="" || s2[i] != " "){
+//         res.push(s2[i])
+//        }
+//     }
+//     return res.join(' ')
+// }
+// console.log(revWords(s))
+
+
+
+//longest subString:
+
+// let s='geeksforgeeks'
+// function longestSubStringLength(s){
+
+//     let start=0,end=0,maxlen=0,set=new Set();
+
+//     while(end<s.length){
+//         if(!set.has(s[end])){
+//             set.add(s[end]);
+//             maxlen=Math.max(maxlen,set.size);
+//             end++;
+//         }
+//         else{
+//             set.delete(s[end]);
+//             start++;
+//         }
+//     }
+//     return maxlen;
+
+// }
+// console.log(longestSubStringLength(s))
+
+
+
+//longest common substring:---->
+// let arr=['owr','fower','flower','flower'];
+
+// function longestSubStr(arr){
+
+//     arr.sort();
+
+//     for(let i=0;i<arr.length;i++){
+//         for(let j=0;j<arr[0].length;j++){
+//             if(arr[0][j]!==arr[arr.length-1][j]){
+//                 return arr[0].substring(0,j);
+//             }
+//         }
+//         return arr[0];
+//     }
+// }
+// console.log(longestSubStr(arr))
+
+
+//obj keyManipulation:--->
+// let obj={
+//     user_first_name:'abhishek',
+//     last_user_name:'adhikary',
+//     user_email_id:'abc@gmail.com'
+// }
+
+
+// let res={};
+
+// for(let [key,value] of Object.entries(obj)){
+//     let keyArr=key.split('_');
+
+//     for(let i=1;i<keyArr.length;i++){
+//         keyArr[i]=keyArr[i].charAt(0).toUpperCase()+keyArr[i].slice(1);
+//     }
+//     let newKey=keyArr.join('');
+//     res[newKey]=value;
+// }
+// console.log(res);
+
+
+//valid palindrome string or not:---->
+
+// function isValidPalindromeString(s) {
+//     //method:-01
+//     // let res='';
+
+//     // for(let i=0;i<s.length;i++){
+//     //     if((s[i].charCodeAt()>=48 && s[i].charCodeAt()<=57 ) || (s[i].charCodeAt()>=65 && s[i].charCodeAt()<=90 ) || (s[i].charCodeAt()>=97 && s[i].charCodeAt()<=122 )){
+//     //         res+=s[i].toLowerCase();
+//     //     }
+//     // }
+
+//     // return res===res.split('').reverse().join('');
+
+
+
+
+//     //----------***-----------------****---------------//
+//     // method2:
+
+//     let s2 = s.replace(/[^a-z0-9]/gi, '');
+//     return s2 === s2.split('').reverse().join('');
+
+
+
+
+
+// }
+
+// console.log(isValidPalindromeString('abb,a'))
+
+
+
+//pattrn practice:--->
+//right angle triangle leftside straight:-->
+
+// let n=5;
+
+// for(let i=1;i<=n;i++){
+//     let s=''
+//     for(let j=0;j<i;j++ ){
+//         s+='*'
+//     }
+//     console.log(s)
+// }
+
+//right angle triangle right side straight:-->
+
+// for(let i=1;i<=n;i++){
+//     let space='';
+//     for(let j=0;j<n-i;j++){
+//         space+=' ';
+//     }
+//     for(let k=0;k<i;k++){
+//         space+='*';
+//     }
+//     console.log(space)
    
+// }
+
+
+//double triangle pattern:--->
+// let n=5;
+// let s='';
+// for(let i=1;i<=n;i++){
+//     for(let j=0;j<i;j++){
+//         s+='*';
+//     }
+//     for(let k=0;k<n-i;k++){
+//         s+=' ';
+//     }
+//     for(let l=0;l<i;l++){
+//         s+='*';
+//     }
+//     s+='\n';
+
+// }
+// console.log(s)
+
+//iso-scaled triangle:--->
+
+let n=5;
+let pattrn='';
+let pattern2='';
+for(let i=1;i<=n;i++){
+    //for space print:
+    for(let s =0;s<n-i;s++){
+        pattrn+=' ';
+
+    }
+    //start printing:
+    for(let j=0;j<(2*i-1);j++){
+        pattrn+='*';
+    }
+    pattrn+='\n';
+
 }
-let arr = [0,6, 3, -1, -3, 4, -2, 2, 4, 6, -12, -7];
-console.log(subArrWith0sum(arr))
+// console.log(pattrn);
+
+for(let i=n-1;i>0;i--){
+    for(let j=0;j<n-i;j++){
+        pattern2+=' ';
+    }
+    for(let k=0;k<(2*i-1);k++){
+        pattern2+='*';
+    }
+    pattern2+='\n';
+}
+// console.log(pattern2)
+console.log(pattrn+pattern2);

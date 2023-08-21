@@ -20,4 +20,4 @@ function isPalindrome(s){
 
   return s2.split('').reverse().join('')===s2;
 }
-console.log(isPalindrome('ab ba'))
+// console.log(isPalindrome('ab ba'))
