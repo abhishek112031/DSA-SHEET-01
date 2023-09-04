@@ -275,3 +275,33 @@
 // let obj1=new obj('abhi',32,'M');
 // obj1.getDetails();
 
+
+//oops practice:--->
+// class Animal{
+//     constructor(name,sound){
+//         this.name=name;
+//         this.sound=sound;
+//     }
+
+//     makeSound(){
+//         console.log(this.name,'makes: ',this.sound)
+//     }
+// }
+
+// class Cat extends Animal{
+//     constructor(name){
+//         super(name,'Meaw');
+//     }
+// }
+// class Dog extends Animal{
+//     constructor(name){
+//         super(name,'Bark');
+//     }
+// }
+
+// let c1=new Cat('TOM');
+// let d1=new Dog ('Harry');
+
+// c1.makeSound();
+// d1.makeSound()
+

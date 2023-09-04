@@ -1796,32 +1796,54 @@
 
 //iso-scaled triangle:--->
 
-let n=5;
-let pattrn='';
-let pattern2='';
-for(let i=1;i<=n;i++){
-    //for space print:
-    for(let s =0;s<n-i;s++){
-        pattrn+=' ';
+// let n=5;
+// let pattrn='';
+// let pattern2='';
+// for(let i=1;i<=n;i++){
+//     //for space print:
+//     for(let s =0;s<n-i;s++){
+//         pattrn+=' ';
 
-    }
-    //start printing:
-    for(let j=0;j<(2*i-1);j++){
-        pattrn+='*';
-    }
-    pattrn+='\n';
+//     }
+//     //start printing:
+//     for(let j=0;j<(2*i-1);j++){
+//         pattrn+='*';
+//     }
+//     pattrn+='\n';
 
-}
-// console.log(pattrn);
+// }
+// // console.log(pattrn);
 
-for(let i=n-1;i>0;i--){
-    for(let j=0;j<n-i;j++){
-        pattern2+=' ';
-    }
-    for(let k=0;k<(2*i-1);k++){
-        pattern2+='*';
-    }
-    pattern2+='\n';
-}
-// console.log(pattern2)
-console.log(pattrn+pattern2);
+// for(let i=n-1;i>0;i--){
+//     for(let j=0;j<n-i;j++){
+//         pattern2+=' ';
+//     }
+//     for(let k=0;k<(2*i-1);k++){
+//         pattern2+='*';
+//     }
+//     pattern2+='\n';
+// }
+// // console.log(pattern2)
+// console.log(pattrn+pattern2);
+
+
+
+//print prime numbers:
+
+// function isPrime(n){
+//     if(n==0 || n==1){
+//         return false;
+//     }
+//     for(let i=2;i<=Math.sqrt(n);i++){
+//         if(n%i==0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// for(let i=1;i<=100;i++){
+//     if(isPrime(i)){
+//         console.log(i)
+//     }
+// }

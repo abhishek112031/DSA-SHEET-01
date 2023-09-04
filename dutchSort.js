@@ -19,7 +19,7 @@ function sortArray(arr) {
     return arr;
 }
 
-const inputArray = [1, 0, 2, 0, 1, 2];
+const inputArray = [0,1,1,2,0,2,1,0,0,2,1];
 const sortedArray = sortArray(inputArray);
 console.log(sortedArray);  // Output: [0, 0, 1, 1, 2, 2]
 
