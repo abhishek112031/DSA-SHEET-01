@@ -1,13 +1,14 @@
 1)Dutch national flag alogorithm:2
 2)kadanes algorithm: 2
 3)row with max 1s
-
 4)next permutation:
 5) object manipulation:
+
 6)longest unique substring:
 7)sliding window
 8)sieve
 9)rottatted sorted array search:
 10)sub array with 0 sum:
+11)sorting algos
 
 ****--------****--------------******------------------****

@@ -27,5 +27,5 @@ var nextPermutation = function(arr) {
     
 };
 
-let arr=[1,2,3];
-console.log(nextPermutation(arr));
+let arr=[6,2,5,3,1];
+console.log(nextPermutation(arr)); //timecomplexity:O(n)
