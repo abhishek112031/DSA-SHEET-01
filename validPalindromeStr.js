@@ -15,9 +15,14 @@
 
 //other method:--->
 
-function isPalindrome(s){
-  let s2=s.replace(/[^a-z0-9]/gi,'');
+// function isPalindrome(s){
+//   let s2=s.replace(/[^a-z0-9]/gi,'');
 
-  return s2.split('').reverse().join('')===s2;
-}
+//   return s2.split('').reverse().join('')===s2;
+// }
 // console.log(isPalindrome('ab ba'))
+
+
+
+// const str='@';
+// console.log(str[0].charCodeAt())

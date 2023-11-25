@@ -1772,7 +1772,7 @@
 //         space+='*';
 //     }
 //     console.log(space)
-   
+
 // }
 
 
@@ -1847,3 +1847,273 @@
 //         console.log(i)
 //     }
 // }
+
+
+
+//array sorting algorithms:--->
+//bubble sort:
+
+// const arr=[5,3,2,1,7,8,9,0];
+// function bubbleSort(arr){
+//     for(let i=0;i<arr.length;i++){
+//         for(let j=0;j<arr.length-1-i;j++){
+//             if(arr[j]>arr[j+1]){
+//                 //swap method:1
+//                 let temp=arr[j+1];
+//                 arr[j+1]=arr[j];
+//                 arr[j]=temp;
+//             }
+
+//         }
+//     }
+//     return arr;
+// }
+// console.log(bubbleSort(arr));
+
+
+
+//strckler thief :
+
+
+// function maxWealth(arr) {
+//     if (arr.length == 0) {
+//         return 0;
+//     }
+//     else if (arr.lengh == 1) {
+//         return arr[0];
+//     }
+
+//     let dp = new Array(arr.length);;
+//     dp[0] = arr[0];
+//     dp[1] = Math.max(arr[0], arr[1]);
+
+//     for (let i = 2; i < arr.length; i++) {
+//         dp[i] = Math.max(dp[i - 1], dp[i - 2] + arr[i]);
+//     }
+//     return dp[arr.length - 1]
+// }
+// console.log(maxWealth([11, 3, 12, 5, 16]))
+
+// function maxWealth2(arr){
+
+//     function wealthInrange(start,end){
+
+//         let curMax=0;
+//         let prevMax=0;
+
+//         for(let i=start;i<end;i++){
+//             let temp=curMax;
+//             curMax=Math.max(curMax,prevMax+arr[i]);
+//             prevMax=temp;
+//         }
+
+//         return curMax;
+//     }
+//     let case1=wealthInrange(0,arr.length-2);
+//     let case2=wealthInrange(1,arr.length-1);
+
+
+//     return Math.max(case1,case2)
+
+// }
+
+
+// arr jump: min jump to reach end of the array:
+
+// function arrJump(arr){
+//     let max=0,cur=0,step=0;
+
+//     for(let i=0;i<arr.length-2;i++){
+//         max=Math.max(max,i+arr[i]);
+
+//         if(i==max){
+//             return -1;
+//         }
+
+//         if(i===cur){
+//             step++;
+//             cur=max;
+//         }
+//     }
+//     return step;
+// }
+// console.log(arrJump([1,2,1,2]))
+
+
+//binary searching:array should be sorted in non decreasing order:
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// function binarySearching(arr,t) {
+
+//     let l = 0, r = arr.length - 1;
+
+//     while (l <= r) {
+//         let mid = l + Math.floor((r - l) / 2);
+
+//         if(arr[mid]===t){
+//             return mid;
+
+//         }
+//         else if(arr[mid]<t){
+//             l=mid+1;
+
+//         }
+//         else{
+//             r=mid-1;
+//         }
+
+
+//     }
+//     return -1;
+
+// }
+// console.log(binarySearching(arr,2))
+
+
+
+//stickler thief:2,(max sum of non adjecent elements of  an array)
+//arr jumping:
+//next permutation:
+//obj manipulation:
+//row with max 1s
+//transpose:2
+//longest unique substring:
+//sorting:3
+
+
+//stickler thief:1
+// function sticklerThiefStraight(arr){
+
+//     let dp=new Array(arr.length);
+
+//     dp[0]=arr[0];
+//     dp[1]=Math.max(arr[0],arr[1]);
+
+//     for(let i=2;i<arr.length;i++){
+//         dp[i]=Math.max(dp[i-1],dp[i-2]+arr[i]);
+//     }
+
+//     return dp[arr.length-1];
+
+
+// } 
+
+// function sticklerthiefCircular(arr){
+
+
+//     if(arr.length==1){
+//         return arr[0];
+//     }
+//     if (arr.length===0){
+//         return 0;
+//     }
+
+//     function searchInrange(s,end){
+//         let prevmax=0;
+//         let curMax=0;
+
+//         for(let i=s;i<end;i++){
+//             let t=curMax;
+//             curMax=Math.max(prevmax+arr[s],curMax);
+//             prevmax=t;
+//         }
+
+//         return curMax;
+//     }
+
+//     let range1=searchInrange(0,arr.length-2);
+//     let range2=searchInrange(1,arr.length-1);
+
+//     return Math.max(range1,range2);
+
+
+// }
+
+
+
+
+// const arr=[12,3,12,25];
+// console.log(sticklerthiefCircular(arr))
+// // console.log(sticklerThiefStraight([12,1,23,4,12,9]))
+
+
+
+// remove outer parenthesis:--->
+// let s='(()()()()())'
+// function removeOuterParenthesis(s){
+//     let count=0;
+//     let ans="";
+
+//     for (let i of s){
+//         if(i==='('){
+//             if(count){
+//                 ans+=i;
+//             }
+//             count++;
+//         }
+//         else{
+//             count--;
+//             if(count){
+//                 ans+=i;
+//             }
+//         }
+//     }
+//     return ans;
+
+// }
+// console.log(removeOuterParenthesis(s))
+
+
+
+//dnfAlgo:
+// function dnfAlgorithm(arr){
+//     let i=0,l=0,h=arr.length-1;
+
+//     while(i<h){
+//         if(arr[i]===0){
+//             [arr[i],arr[l]]=[arr[l],arr[i]];
+//             i++;
+//             l++;
+//         }
+//         else if(arr[i]===2){
+//             [arr[i],arr[h]]=[arr[h],arr[i]];
+//             h--;
+
+//         }
+//         else{
+//             i++;
+//         }
+//     }
+//     return arr;
+
+
+// }
+// console.log(dnfAlgorithm([0,1,2,0,0,2,1]))
+
+
+//sorting by no of char:
+let arr=['aaabhishek','vaibhav','monalisha','santoshuyuy'];
+
+function countOfA(elem){
+    let count=0;
+    for(let i of elem){
+        if(i==='a'){
+            count++;
+        }
+    }
+    return count;
+}
+
+
+function sortByNoOfChar(arr){
+    arr.sort((x,y)=>{
+        if(countOfA(x)===countOfA(y)){
+            return y.length-x.length
+        }
+        else{
+            return countOfA(y)-countOfA(x)
+        }
+    });
+    return arr;
+}
+
+console.log(sortByNoOfChar(arr))

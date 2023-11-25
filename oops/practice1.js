@@ -305,3 +305,38 @@
 // c1.makeSound();
 // d1.makeSound()
 
+// class Person{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+//     }
+
+//     getDetails(){
+//         console.log(this.name,this.age);
+//     }
+// }
+
+
+// class Child extends Person{
+//     // constructor(name){
+//     //     super(name,25);
+
+//     // }
+// }
+// const p1=new Person('abhi',23);
+// const p2=new Person('ani',33);
+
+// // const c1=new Child('alash is a child');
+
+// // console.log(c1.hasOwnProperty('name'));//true
+// // c1.getDetails()
+// // console.log(c1.hasOwnProperty('age'))//true
+
+
+// // console.log(Object.getPrototypeOf(c1))
+
+// const child=new Child('child',20);
+
+// child.getDetails()
+// console.log(child.hasOwnProperty('age'))
+

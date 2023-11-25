@@ -16,4 +16,4 @@ function removeConsecutiveChar(s){
     }
     return res.join('')
 }
-console.log(removeConsecutiveChar('aabbbbbc'))
+console.log(removeConsecutiveChar('aabbabbbc'))

@@ -14,14 +14,14 @@
 // console.log(findFactorial(5))
 
 //method:2
-// function findFactorial(n){
-//     if(n==0){
-//         return 1;
-//     }
-//     else{
-//         return findFactorial(n-1)*n
-//     }
+function findFactorial(n){
+    if(n==0){
+        return 1;
+    }
+    else{
+        return findFactorial(n-1)*n
+    }
     
 
-// }
-// console.log(findFactorial(3))
+}
+console.log(findFactorial(3))

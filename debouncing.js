@@ -12,7 +12,7 @@ function debounce(func, delay) {
 
 }
 function func(){
-    console.log('hello');
+    console.log('hello world!');
 }
 
-debounce(func,1000)()
+debounce(func,2000)()

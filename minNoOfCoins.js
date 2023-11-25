@@ -18,4 +18,4 @@ function minCoins(val,coins){
     return res
 
 }
-console.log(minCoins(1170,[1, 2, 5, 10, 20, 50, 100, 500, 1000]))
+console.log(minCoins(1173,[1, 2, 5, 10, 20, 50, 100, 500, 1000]))

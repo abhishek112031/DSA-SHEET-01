@@ -452,22 +452,22 @@
 
 //memoization:
 
-function factorialOf(n){
-    if(n<0) return 'cant be calculated!'
-    if(n===0){
-        return 1;
-    }
-    else{
-        return n*factorialOf(n-1);
-    }
-}
-console.time()
-console.log(factorialOf(5))
-console.timeEnd()
+// function factorialOf(n){
+//     if(n<0) return 'cant be calculated!'
+//     if(n===0){
+//         return 1;
+//     }
+//     else{
+//         return n*factorialOf(n-1);
+//     }
+// }
+// console.time()
+// console.log(factorialOf(5))
+// console.timeEnd()
 
-console.time()
-console.log(factorialOf(5))
-console.timeEnd()
+// console.time()
+// console.log(factorialOf(5))
+// console.timeEnd()
 
 
 
@@ -495,3 +495,166 @@ console.timeEnd()
 // let memoize2=memoization();
 // console.log(memoize2(5));
 // console.timeEnd();
+
+
+//generator function:
+// function *generator(){
+//     yield 1;
+//     yield 2;
+// }
+// console.log(generator().next().value)
+
+
+// function *generator(n){
+//     for(let i=0;i<=n;i++){
+//         yield i;
+//     }
+// }
+// console.log(generator(5).next().value)
+
+
+//common element of 3 sorted Array:
+// let ar1 = [1, 5, 10, 20, 40, 80]; 
+// let ar2 = [6, 7, 20, 80, 100]; 
+// let ar3 = [3, 4, 15, 20, 30, 70, 80, 120];
+
+
+// function findCommonElement(arr1,arr2,arr3){
+//     let i=0,j=0,k=0;
+//     let res=[];
+//     while(i<arr1.length && j<arr2.length && k<arr3.length){
+//         if(arr1[i]===arr2[j] && arr2[j]===arr3[k]){
+//             res.push(arr1[i]);
+//             i++;
+//             j++;
+//             k++;
+//         }
+//         else if(arr1[i]<arr2[j]){
+//             i++;
+//         }
+//         else if(arr2[j]<arr3[k]){
+//             j++;
+//         }
+//         else{ 
+//             k++;
+//         }
+//     }
+//     return res;
+// }
+// console.log(findCommonElement(ar1,ar2,ar3))
+
+
+//buy sell stock:
+// let arr=[1,2,3,4,5,6,3,0];
+
+// function buySellStock(arr){
+//     let curPrice=arr[0];
+//     let maxProfit=0;
+
+//     for(let i=1;i<arr.length;i++){
+//         let curProfit=arr[i]-curPrice;
+
+//         if(curPrice>arr[i]){
+//             curPrice=arr[i];
+//         }
+//         if(maxProfit<curProfit){
+//             maxProfit=curProfit;
+//         }
+//     }
+//     return maxProfit;
+// }
+// console.log(buySellStock(arr))
+
+
+//kadanes' algo for finding maxsum subarray:
+
+// let arr=[1,-3,-4,5,-6,-1,7,-1,8];
+// function maxSumSubArr(arr){
+
+//     let max=arr[0];
+//     let curSum=0;
+
+//     for(let i=0;i<arr.length;i++){
+//         curSum=curSum+arr[i];
+//         max=Math.max(curSum,max);
+
+//         if(curSum<0){
+//             curSum=0;
+//         }
+//     }
+//     return max;
+
+// }
+// console.log(maxSumSubArr(arr))
+
+
+// function func1(x){
+//     console.log(x,arguments[0],arguments[1]);
+// }
+// func1(2,3)
+
+
+//function can be called as curring or normal:
+
+// function sum(x){
+//     if(arguments.length>1){
+//         return arguments[0]+arguments[1];
+//     }else{
+//         console.log(true)
+//         return function(y){
+//             return x+y;
+//         }
+//     }
+// }
+
+// // console.log(sum(1,2));
+// console.log(sum(1)(2));
+
+//find longest unique substring length;
+
+// const s='geeksforgeeks'
+// function longestUniqueSubstring(s){
+//     if(!s.length){
+//         return -1;
+//     }
+//     let substr;
+//     let maxlen=0,start=0,end=0;
+//     let set=new Set();
+
+//     while(end<s.length){
+//         if(!set.has(s[end])){
+//             set.add(s[end]);
+//             // maxlen=Math.max(maxlen,set.size);
+//             // substr=set;
+
+//             if(maxlen<set.size){
+//                 maxlen=set.size;
+//                 substr=[...set].join('');
+//             }
+//             end++;
+//         }
+//         else{
+//             set.delete(s[start]) ;
+//             start++;
+//         }
+//     }
+//     return [maxlen,substr]
+
+// }
+// console.log(longestUniqueSubstring(s))
+
+
+function sum(num){
+    let temp=num;
+    let res=0;
+
+    if(temp=0){
+        return 0;
+    }else{
+        res=res
+
+    }
+}
+
+
+
